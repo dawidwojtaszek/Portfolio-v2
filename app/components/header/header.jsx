@@ -5,7 +5,7 @@ import Container from "../utilities/container";
 const Header = () => (
   <header className="bg-white h-20 w-full">
     <Container className="h-full items-center flex justify-between">
-      <Link href="/" className="p-4 md:p-0">
+      <Link href="/">
         <Image src={Logo} alt="logo" priority />
       </Link>
       <nav className="flex h-full items-center text-lg">
