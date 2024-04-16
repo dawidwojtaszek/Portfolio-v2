@@ -1,4 +1,4 @@
-import { spaceGrotesk } from "@/app/layout";
+import { spaceGrotesk } from "../utilities/fonts";
 const HeroInfo = () => (
   <div className=" ">
     <h1

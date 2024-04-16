@@ -1,4 +1,4 @@
-import { spaceGrotesk } from "@/app/layout";
+import { spaceGrotesk } from "./fonts";
 const SectionHeading = ({ children, className }) => (
   <div className="flex justify-start h-[30px] items-center">
     <div className="w-[20px] h-[30px] bg-green mr-2"></div>

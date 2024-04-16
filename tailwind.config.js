@@ -11,12 +11,17 @@ module.exports = {
       gray: "#f4f5f6",
       darkGray: "#363537",
       darkBlue: "#2b4162",
+      white: "#fff",
     },
     screens: {
       md: "900px",
       sm: "700px",
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        shadowEffect: "8px 8px 0px -1px rgb(12, 206, 107)",
+      },
+    },
   },
   plugins: [],
 };
