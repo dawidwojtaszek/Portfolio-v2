@@ -4,7 +4,7 @@ import Card from "./card";
 const Portfolio = () => (
   <Container className="my-[70px]">
     <SectionHeading>Portfolio</SectionHeading>
-    <Card />
+    <Card mainPhotoUrl="/images/mockupLorem.jpg" mainPhotoAlt="Lorem mockup" />
   </Container>
 );
 
