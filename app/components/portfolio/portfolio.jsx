@@ -10,7 +10,7 @@ const Portfolio = ({ data }) => {
 
   return (
     <Container className="my-[70px]">
-      <SectionHeading>Portfolio</SectionHeading>
+      <SectionHeading className="mb-12">Portfolio</SectionHeading>
       {projects.map((project) => (
         <Card
           key={project.id}

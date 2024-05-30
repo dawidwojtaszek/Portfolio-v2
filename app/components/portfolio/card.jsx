@@ -15,7 +15,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className="border-4 border-darkBlue shadow-shadowEffect flex h-[345px]"
+      className="border-4 border-darkBlue shadow-shadowEffect flex h-[345px] mb-12"
       role="none presentation"
     >
       <Image src={mainPhotoUrl} alt={mainPhotoAlt} width={500} height={345} />
