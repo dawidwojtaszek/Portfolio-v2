@@ -18,15 +18,10 @@ const Portfolio = ({ data }) => {
           mainPhotoAlt={`${project.slug} mockup`}
           projectName={project.title}
           shortDescription={project.description}
+          githubUrl={project.githubUrl}
+          previewUrl={project.previewUrl}
         />
       ))}
-
-      {/* <Card
-        mainPhotoUrl="/images/mockupLorem.jpg"
-        mainPhotoAlt="Lorem mockup"
-        projectName="Aplikcja Ecomerce z użyciem React.js"
-        shortDescription="W ramach nauki Reacta stworzyłem aplikację ecomerce. Projekt okazał się świetnym sposobem na poszerzenie swoich umiejętności."
-      /> */}
     </Container>
   );
 };

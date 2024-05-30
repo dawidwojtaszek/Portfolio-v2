@@ -10,8 +10,9 @@ const Card = ({
   mainPhotoAlt,
   projectName,
   shortDescription,
+  previewUrl,
+  githubUrl,
 }) => {
-  console.log(mainPhotoUrl);
   return (
     <div
       className="border-4 border-darkBlue shadow-shadowEffect flex h-[345px]"
@@ -38,12 +39,12 @@ const Card = ({
               Więcej
             </Button>
           </Link>
-          <Link href="#" className="w-full">
+          <Link href={previewUrl} className="w-full">
             <Button icon={faEye} className="w-full h-[50px]">
               Podgląd
             </Button>
           </Link>
-          <Link href="#" className="w-full">
+          <Link href={githubUrl} className="w-full">
             <Button icon={faGithub} className="w-full h-[50px]">
               Github
             </Button>
