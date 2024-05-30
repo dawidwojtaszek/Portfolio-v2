@@ -1,7 +1,7 @@
 ---
 id: 1
 title: Aplikcja Ecomerce z użyciem React.js
-description: Short description
+description: W ramach nauki Reacta stworzyłem aplikację ecomerce. Projekt okazał się świetnym sposobem na poszerzenie swoich umiejętności.
 tags:
   - React
   - Redux
