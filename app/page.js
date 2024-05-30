@@ -5,11 +5,10 @@ import { getSortedProjectsData } from "@/lib/fetchMarkdown";
 
 export default function Home() {
   const data = getSortedProjectsData();
-  console.log(data);
   return (
     <main>
       <HeroSection />
-      <Portfolio />
+      <Portfolio data={data} />
       <Contact />
     </main>
   );
