@@ -19,7 +19,13 @@ const Card = ({
       className="border-4 border-darkBlue shadow-shadowEffect flex h-[345px] mb-12"
       role="none presentation"
     >
-      <Image src={mainPhotoUrl} alt={mainPhotoAlt} width={500} height={345} />
+      <Image
+        className="hidden md:block"
+        src={mainPhotoUrl}
+        alt={mainPhotoAlt}
+        width={500}
+        height={345}
+      />
 
       <div className="flex flex-col justify-between w-full">
         <div className=" px-9 pt-9 pb-5" role="none presentation">
@@ -29,7 +35,6 @@ const Card = ({
             {projectName}
           </h3>
           {/* TODO add tags to this component */}
-          {/* TODO add mobile styles */}
           <p className=" text-xl">{shortDescription}</p>
         </div>
         <div

@@ -14,7 +14,7 @@ module.exports = {
       white: "#fff",
     },
     screens: {
-      md: "900px",
+      md: "950px",
       sm: "700px",
     },
     extend: {
