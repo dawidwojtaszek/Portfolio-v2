@@ -9,7 +9,7 @@ tags:
   - Framer Motion
   - Adobe XD
 mainPhotoUrl: /images/mockupLorem.jpg
-sesoundaryPhotoUrl:
+sesoundaryPhotoUrl: /images/loremEcomerceShowcaseMockup.jpg
 previewUrl: https://lorem-ecomerce.netlify.app/
 githubUrl: https://github.com/dawidwojtaszek/loremecomerce
 ---

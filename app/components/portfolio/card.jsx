@@ -12,6 +12,7 @@ const Card = ({
   shortDescription,
   previewUrl,
   githubUrl,
+  slug,
 }) => {
   return (
     <div
@@ -28,13 +29,14 @@ const Card = ({
             {projectName}
           </h3>
           {/* TODO add tags to this component */}
+          {/* TODO add mobile styles */}
           <p className=" text-xl">{shortDescription}</p>
         </div>
         <div
           className="flex justify-between w-full p-[5px] gap-[5px] text-xl"
           role="none presentation"
         >
-          <Link href="#" className="w-full">
+          <Link href={`/projects/${slug}`} className="w-full">
             <Button icon={faUpDownLeftRight} className="w-full h-[50px]">
               Więcej
             </Button>

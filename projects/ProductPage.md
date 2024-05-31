@@ -6,7 +6,7 @@ tags:
   - Gatsby.js
   - Styled-components
 mainPhotoUrl: /images/mockupProductPage.jpg
-sesoundaryPhotoUrl:
+sesoundaryPhotoUrl: /images/productPageShowcase.jpg
 previewUrl: https://ecstatic-franklin-af1c80.netlify.app/
 githubUrl: https://github.com/dawidwojtaszek/E-commerce-product-page-challenge
 ---
