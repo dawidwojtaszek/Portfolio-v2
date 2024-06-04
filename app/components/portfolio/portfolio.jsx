@@ -35,13 +35,6 @@ const Portfolio = ({ data }) => {
           slug={project.slug}
         />
       ))}
-      <button
-        onClick={() => {
-          setFilters(["Styled-components", "Gatsby.js"]);
-        }}
-      >
-        Test
-      </button>
     </Container>
   );
 };
