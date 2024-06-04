@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className="border-4 border-darkBlue shadow-shadowEffect flex h-[345px] mb-12"
+      className="border-4 border-darkBlue shadow-shadowEffect flex min-h-[345px] mb-12"
       role="none presentation"
     >
       <Image
