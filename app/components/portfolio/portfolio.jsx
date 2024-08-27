@@ -2,19 +2,22 @@
 import Container from "../utilities/container";
 import SectionHeading from "../utilities/sectionHeading";
 import Card from "./card";
+import Button from "../utilities/button";
 import { useState, useEffect } from "react";
 import Filters from "./filters";
-
+import { useAppContext } from "@/app/context/context";
 const Portfolio = ({ data }) => {
-  const [projects, setProjects] = useState(data);
   const [filters, setFilters] = useState([]);
-
-  const allTagsList = data
-    .map((e) => {
-      return e.tags;
-    })
-    .flat();
-  const tags = Array.from(new Set(allTagsList));
+  const { setProjects, projects } = useAppContext();
+  let tags;
+  if (projects) {
+    const allTagsList = projects
+      .map((e) => {
+        return e.tags;
+      })
+      .flat();
+    tags = Array.from(new Set(allTagsList));
+  }
 
   useEffect(() => {
     if (filters.length === 0) {
@@ -27,7 +30,9 @@ const Portfolio = ({ data }) => {
     }
   }, [filters]);
   // TODO add date to projects info
-
+  if (!projects) {
+    return <div>Loading...</div>;
+  }
   return (
     <Container className="my-[70px]">
       <SectionHeading className="mb-12">Portfolio</SectionHeading>
@@ -44,6 +49,7 @@ const Portfolio = ({ data }) => {
           slug={project.slug}
         />
       ))}
+      <Button>Załaduj więcej</Button>
     </Container>
   );
 };
