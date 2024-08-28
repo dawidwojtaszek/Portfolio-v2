@@ -8,6 +8,8 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import SectionHeading from "@/app/components/utilities/sectionHeading";
 import { notFound } from "next/navigation";
+
+// TODO Switch data fetching method to API Calls
 export default function ProjectsPage({ params: { slug } }) {
   const projectInfo = getSortedProjectsData().find((e) => e.slug === slug);
   if (projectInfo != undefined) {

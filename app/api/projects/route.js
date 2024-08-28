@@ -22,8 +22,6 @@ export async function GET() {
         ...matterResult.data,
       };
     });
-    console.log("asd;lfkljasd;lfkj");
-    console.log(allProjectsData);
 
     return NextResponse.json({
       success: true,
