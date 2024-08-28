@@ -6,7 +6,7 @@ import Button from "../utilities/button";
 import { useState, useEffect } from "react";
 import Filters from "./filters";
 import { useAppContext } from "@/app/context/context";
-const Portfolio = ({ data }) => {
+const Portfolio = () => {
   const [filters, setFilters] = useState([]);
   const { setProjects, projects } = useAppContext();
   let tags;
@@ -18,17 +18,7 @@ const Portfolio = ({ data }) => {
       .flat();
     tags = Array.from(new Set(allTagsList));
   }
-
-  useEffect(() => {
-    if (filters.length === 0) {
-      setProjects(data);
-    } else {
-      const filteredProjects = data.filter((project) =>
-        project.tags.some((e) => filters.includes(e))
-      );
-      setProjects(filteredProjects);
-    }
-  }, [filters]);
+  console.log(projects);
   // TODO add date to projects info
   if (!projects) {
     return <div>Loading...</div>;
