@@ -7,14 +7,28 @@ const appContext = createContext();
 
 export const Provider = ({ children }) => {
   const [projects, setProjects] = useState();
+  const [tags, setTags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const [currentFilters, setCurrentFilter] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const data = await loadData();
-        setProjects(data);
+        // Set projects to state
+        const projects = await loadData();
+        setProjects(projects);
+        // Set Tags to state
+        const tagsList = Array.from(
+          new Set(
+            projects
+              .map((e) => {
+                return e.tags;
+              })
+              .flat()
+          )
+        );
+        setTags(tagsList);
+        // Toggle isLoading state
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -23,7 +37,15 @@ export const Provider = ({ children }) => {
     fetchData();
   }, []);
 
-  const value = { projects, setProjects, isLoading, setIsLoading };
+  const value = {
+    projects,
+    setProjects,
+    isLoading,
+    setIsLoading,
+    tags,
+    currentFilters,
+    setCurrentFilter,
+  };
 
   return <appContext.Provider value={value}>{children}</appContext.Provider>;
 };

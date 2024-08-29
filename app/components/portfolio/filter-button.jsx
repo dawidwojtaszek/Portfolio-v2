@@ -2,11 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAdd, faRemove } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer";
-import { useAppContext } from "@/app/context/context";
 const FilterButton = ({ name, className, onClick, active }) => {
-  const { projects } = useAppContext();
-
-  console.log(projects);
   return (
     <motion.button
       className={`${

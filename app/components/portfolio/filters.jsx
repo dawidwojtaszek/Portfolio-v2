@@ -1,13 +1,18 @@
 import FilterButton from "./filter-button";
-export default function Filters({ currentFilters, setFilters, tags }) {
+import { useAppContext } from "@/app/context/context";
+
+export default function Filters() {
+  const { tags, currentFilters, setCurrentFilter } = useAppContext();
+
   const handleClick = (e) => {
     if (currentFilters.includes(e)) {
       const newFilters = currentFilters.filter((el) => el !== e);
-      setFilters(newFilters);
+      setCurrentFilter(newFilters);
     } else {
-      setFilters([...currentFilters, e]);
+      setCurrentFilter([...currentFilters, e]);
     }
   };
+
   return (
     <div className="flex justify-start gap-2 mb-3 flex-wrap">
       {tags.map((e, index) => {
