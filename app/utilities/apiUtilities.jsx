@@ -15,3 +15,21 @@ export const loadData = async () => {
     return `Error: ${error.message}`;
   }
 };
+
+export const loadProjectData = async (slug) => {
+  try {
+    const res = await fetch(`/api/projects/${slug}`, {
+      method: "GET",
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      return result.data;
+    } else {
+      return `Error: ${result.message}`;
+    }
+  } catch (error) {
+    return `Error: ${error.message}`;
+  }
+};
