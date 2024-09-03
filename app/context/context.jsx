@@ -1,12 +1,19 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useReducer,
+  useEffect,
+} from "react";
 import { loadData } from "../utilities/apiUtilities";
 
 const appContext = createContext();
 
 export const Provider = ({ children }) => {
   const [projects, setProjects] = useState();
+  const [currentProjects, setCurrentProjects] = useState();
   const [tags, setTags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentFilters, setCurrentFilter] = useState([]);
@@ -16,7 +23,9 @@ export const Provider = ({ children }) => {
         setIsLoading(true);
         // Set projects to state
         const projects = await loadData();
+        const shortList = projects.slice(0, 4);
         setProjects(projects);
+        setCurrentProjects(shortList);
         // Set Tags to state
         const tagsList = Array.from(
           new Set(
@@ -45,6 +54,8 @@ export const Provider = ({ children }) => {
     tags,
     currentFilters,
     setCurrentFilter,
+    currentProjects,
+    setCurrentProjects,
   };
 
   return <appContext.Provider value={value}>{children}</appContext.Provider>;

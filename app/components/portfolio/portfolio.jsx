@@ -5,7 +5,7 @@ import ProjectList from "./projectsList";
 import Filters from "./filters";
 import { useAppContext } from "@/app/context/context";
 const Portfolio = () => {
-  const { projects, isLoading } = useAppContext();
+  const { currentProjects, isLoading } = useAppContext();
 
   // TODO add date to projects info
 
@@ -14,7 +14,7 @@ const Portfolio = () => {
       <SectionHeading className="mb-12">Portfolio</SectionHeading>
       <Filters />
 
-      {isLoading ? "loading.." : <ProjectList projects={projects} />}
+      {isLoading ? "loading.." : <ProjectList />}
     </Container>
   );
 };
