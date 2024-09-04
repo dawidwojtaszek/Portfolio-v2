@@ -18,7 +18,7 @@ export const loadData = async () => {
 
 export const loadProjectData = async (slug) => {
   try {
-    const res = await fetch(`/api/projects/${slug}`, {
+    const res = await fetch(`${process.env.URL}/api/projects/${slug}`, {
       method: "GET",
     });
 

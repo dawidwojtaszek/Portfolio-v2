@@ -7,8 +7,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import SectionHeading from "@/app/components/utilities/sectionHeading";
 import { notFound } from "next/navigation";
-
-const ProjectDetails = ({ project }) => {
+import { loadProjectData } from "@/app/utilities/apiUtilities";
+//TODO add loading boundries
+const ProjectDetails = async ({ slug }) => {
+  const data = await loadProjectData(slug);
+  const project = data[0];
   return (
     <div className="min-h-[calc(100vh-200px)]">
       <div className=" bg-gray md:min-h-[480px]">
