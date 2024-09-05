@@ -36,7 +36,6 @@ const Card = ({
           >
             {projectName}
           </h3>
-          {/* TODO add tags to this component */}
 
           <Tags tags={tags} />
           <p className=" text-xl">{shortDescription}</p>
