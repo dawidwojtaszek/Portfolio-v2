@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "../utilities/button";
 import Link from "next/link";
+import Tags from "./tags";
 import { faUpDownLeftRight, faEye } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { spaceGrotesk } from "../utilities/fonts";
@@ -13,6 +14,7 @@ const Card = ({
   previewUrl,
   githubUrl,
   slug,
+  tags,
 }) => {
   return (
     <div
@@ -35,6 +37,8 @@ const Card = ({
             {projectName}
           </h3>
           {/* TODO add tags to this component */}
+
+          <Tags tags={tags} />
           <p className=" text-xl">{shortDescription}</p>
         </div>
         <div

@@ -23,6 +23,7 @@ const ProjectList = () => {
           githubUrl={project.githubUrl}
           previewUrl={project.previewUrl}
           slug={project.slug}
+          tags={project.tags}
         />
       ))}
       <button className="p-2 bg-darkGray text-white" onClick={handleLoadMore}>
