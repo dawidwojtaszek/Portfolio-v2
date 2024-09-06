@@ -1,3 +1,4 @@
+"use client";
 import FilterButton from "./filter-button";
 import { useAppContext } from "@/app/context/context";
 

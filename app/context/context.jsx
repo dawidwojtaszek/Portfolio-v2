@@ -12,8 +12,8 @@ import { loadData } from "../utilities/apiUtilities";
 const appContext = createContext();
 
 export const Provider = ({ children }) => {
-  const [projects, setProjects] = useState();
-  const [currentProjects, setCurrentProjects] = useState();
+  const [projects, setProjects] = useState([]);
+  const [currentProjects, setCurrentProjects] = useState([]);
   const [tags, setTags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentFilters, setCurrentFilter] = useState([]);
@@ -45,6 +45,19 @@ export const Provider = ({ children }) => {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    let shortList;
+    if (currentFilters.length === 0) {
+      shortList = projects.slice(0, 4);
+    } else {
+      shortList = projects.filter((e) =>
+        currentFilters.some((t) => e.tags.includes(t))
+      );
+    }
+
+    setCurrentProjects(shortList);
+  }, [currentFilters]);
 
   const value = {
     projects,

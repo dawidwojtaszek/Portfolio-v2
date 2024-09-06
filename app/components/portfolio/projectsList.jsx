@@ -2,7 +2,8 @@
 import { useAppContext } from "@/app/context/context";
 import Card from "./card";
 const ProjectList = () => {
-  const { setCurrentProjects, currentProjects, projects } = useAppContext();
+  const { setCurrentProjects, currentProjects, projects, currentFilters } =
+    useAppContext();
   const handleLoadMore = () => {
     if (currentProjects.length <= 4) {
       setCurrentProjects(projects);
@@ -10,7 +11,6 @@ const ProjectList = () => {
       setCurrentProjects(projects.slice(0, 4));
     }
   };
-
   return (
     <div>
       {currentProjects.map((project) => (
@@ -26,9 +26,13 @@ const ProjectList = () => {
           tags={project.tags}
         />
       ))}
-      <button className="p-2 bg-darkGray text-white" onClick={handleLoadMore}>
-        {currentProjects.length <= 4 ? "Załaduj wszystkie" : "Zwiń"}
-      </button>
+      {currentFilters.length != 0 ? (
+        ""
+      ) : (
+        <button className="p-2 bg-darkGray text-white" onClick={handleLoadMore}>
+          {currentProjects.length <= 4 ? "Załaduj wszystkie" : "Zwiń"}
+        </button>
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import SectionHeading from "@/app/components/utilities/sectionHeading";
 import { notFound } from "next/navigation";
 import { loadProjectData } from "@/app/utilities/apiUtilities";
 //TODO add loading boundries
+// TODO add notFound
 const ProjectDetails = async ({ slug }) => {
   const data = await loadProjectData(slug);
   const project = data[0];
