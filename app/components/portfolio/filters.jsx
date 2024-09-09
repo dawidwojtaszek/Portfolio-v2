@@ -13,9 +13,11 @@ export default function Filters() {
       setCurrentFilter([...currentFilters, e]);
     }
   };
-
+  const handleClearFilters = () => {
+    setCurrentFilter([]);
+  };
   return (
-    <div className="flex justify-start gap-2 mb-3 flex-wrap">
+    <div className="flex justify-start gap-2 mb-3 flex-wrap items-start">
       {tags.map((e, index) => {
         return (
           <FilterButton
@@ -28,6 +30,18 @@ export default function Filters() {
           />
         );
       })}
+      <div className="min-h-12 items-center flex">
+        {currentFilters.length > 0 ? (
+          <button
+            className="bg-darkGray text-white px-2 py-1 rounded-lg "
+            onClick={handleClearFilters}
+          >
+            Wyczyść filtry
+          </button>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 }
