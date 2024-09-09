@@ -9,11 +9,13 @@ module.exports = {
     colors: {
       green: "#0cce6B",
       gray: "#f4f5f6",
+      darkerGray: "rgb(221, 224, 227)",
       darkGray: "#363537",
       darkBlue: "#2b4162",
       white: "#fff",
     },
     screens: {
+      lg: "1200px",
       md: "950px",
       sm: "700px",
     },
