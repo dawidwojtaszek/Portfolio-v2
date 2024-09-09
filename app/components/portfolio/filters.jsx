@@ -1,7 +1,7 @@
 "use client";
 import FilterButton from "./filter-button";
 import { useAppContext } from "@/app/context/context";
-
+import { spaceGrotesk } from "../utilities/fonts";
 export default function Filters() {
   const { tags, currentFilters, setCurrentFilter } = useAppContext();
 
@@ -33,7 +33,7 @@ export default function Filters() {
       <div className="min-h-12 items-center flex">
         {currentFilters.length > 0 ? (
           <button
-            className="bg-darkGray text-white px-2 py-1 rounded-lg "
+            className={` border uppercase px-2 py-1 ${spaceGrotesk.className}`}
             onClick={handleClearFilters}
           >
             Wyczyść filtry

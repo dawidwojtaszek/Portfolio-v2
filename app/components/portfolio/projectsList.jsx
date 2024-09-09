@@ -1,6 +1,7 @@
 "use client";
 import { useAppContext } from "@/app/context/context";
 import Card from "./card";
+import { spaceGrotesk } from "../utilities/fonts";
 const ProjectList = () => {
   const { setCurrentProjects, currentProjects, projects, currentFilters } =
     useAppContext();
@@ -29,9 +30,14 @@ const ProjectList = () => {
       {currentFilters.length != 0 ? (
         ""
       ) : (
-        <button className="p-2 bg-darkGray text-white" onClick={handleLoadMore}>
-          {currentProjects.length <= 4 ? "Załaduj wszystkie" : "Zwiń"}
-        </button>
+        <div className="w-full flex justify-center">
+          <button
+            className={`py-2 px-3 border  uppercase ${spaceGrotesk.className}`}
+            onClick={handleLoadMore}
+          >
+            {currentProjects.length <= 4 ? "Załaduj wszystkie" : "Zwiń"}
+          </button>
+        </div>
       )}
     </div>
   );
