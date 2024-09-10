@@ -2,6 +2,7 @@
 id: 4
 title: Strona Produktu - Chalange z FrontEndMentor
 description: Jest to kolejne rozwiązanie wyzwania z FrontEndMentor tym razem z użyciem Gatsby, jest to typowa strona produktu w aplikacji e-comerce.
+date: 2021
 tags:
   - Gatsby.js
   - Styled-components

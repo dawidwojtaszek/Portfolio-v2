@@ -2,6 +2,7 @@
 id: 2
 title: Strona internetowa dla lokalnej drużyny
 description: Strona internetowa dla lokalnej drużyny piłkarskiej okazała się idealnym projektem do nauki Gatsby.js oraz styled-components.
+date: 2021
 tags:
   - Gatsby.js
   - Styled-components

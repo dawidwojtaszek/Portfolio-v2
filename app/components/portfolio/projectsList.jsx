@@ -25,6 +25,7 @@ const ProjectList = () => {
           previewUrl={project.previewUrl}
           slug={project.slug}
           tags={project.tags}
+          date={project.date}
         />
       ))}
       {currentFilters.length != 0 ? (

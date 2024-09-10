@@ -2,6 +2,7 @@
 id: 3
 title: Landing Page - Chalange z FrontEndMentor
 description: Rozwiązanie zadania z FrontEndMentor. Jest to Landing Page fikcyjnego banku do wykonania którego użyłem wyłącznie HTML i Sass.
+date: 2021
 tags:
   - HTML
   - Sass

@@ -15,6 +15,7 @@ const Card = ({
   githubUrl,
   slug,
   tags,
+  date,
 }) => {
   return (
     <div
@@ -30,7 +31,12 @@ const Card = ({
       />
 
       <div className="flex flex-col justify-between w-full">
-        <div className=" px-9 pt-9 pb-5" role="none presentation">
+        <div className="w-full flex justify-end">
+          <span className="p-1 bg-darkBlue text-white font-bold m-1">
+            {date}
+          </span>
+        </div>
+        <div className=" px-9 pt-2 pb-5" role="none presentation">
           <h3
             className={`${spaceGrotesk.className} text-darkBlue font-bold text-4xl`}
           >
