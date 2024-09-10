@@ -27,7 +27,7 @@ export const loadProjectData = async (slug) => {
     if (result.success) {
       return result.data;
     } else {
-      return `Error: ${result.message}`;
+      return null;
     }
   } catch (error) {
     return `Error: ${error.message}`;
