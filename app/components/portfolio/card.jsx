@@ -22,14 +22,18 @@ const Card = ({
       className="border-4 border-darkBlue shadow-shadowEffect flex min-h-[345px] mb-12"
       role="none presentation"
     >
-      <Image
-        className="hidden md:block"
-        src={mainPhotoUrl}
-        alt={mainPhotoAlt}
-        width={500}
-        height={345}
-      />
-
+      <div className=" relative hidden md:block min-w-[500px] min-h-[345px] object-fill">
+        <Image
+          className="hidden md:block"
+          src={mainPhotoUrl}
+          alt={mainPhotoAlt}
+          // width={500}
+          // height={345}
+          fill
+          sizes="max-width:500px; max-height:345px"
+          priority={true}
+        />
+      </div>
       <div className="flex flex-col justify-between w-full">
         <div className="w-full flex justify-end">
           <span className="p-1 bg-darkBlue text-white font-bold m-1">
