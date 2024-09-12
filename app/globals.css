@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .skeleton-bg {
+    background: linear-gradient(60deg,#ecebeb 25%, #f4f4f4 50%,  #ecebeb);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s linear infinite;
+  }
+    @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}

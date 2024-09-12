@@ -5,7 +5,7 @@ import ProjectList from "./projectsList";
 import Filters from "./filters";
 import { Element } from "react-scroll";
 import { Suspense } from "react";
-import SkeletonAnimation from "./skeleton-animation";
+import SkeletonAnimation from "./skeleton-animation-projects";
 import { useAppContext } from "@/app/context/context";
 const Portfolio = () => {
   const { currentProjects, isLoading } = useAppContext();
