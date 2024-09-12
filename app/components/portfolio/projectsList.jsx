@@ -39,7 +39,9 @@ const ProjectList = () => {
             className={`py-2 px-3 border  uppercase ${spaceGrotesk.className}`}
             onClick={handleLoadMore}
           >
-            {currentProjects.length <= 4 ? "Załaduj wszystkie" : "Zwiń"}
+            {currentProjects.length <= 4
+              ? `Załaduj wszystkie (${projects.length})`
+              : "Zwiń"}
           </button>
         </div>
       )}
