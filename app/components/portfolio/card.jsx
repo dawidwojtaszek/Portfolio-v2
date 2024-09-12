@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Button from "../utilities/button";
 import Link from "next/link";
 import Tags from "./tags";
+import { motion } from "framer";
 import { faUpDownLeftRight, faEye } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { spaceGrotesk } from "../utilities/fonts";
@@ -18,9 +20,14 @@ const Card = ({
   date,
 }) => {
   return (
-    <div
+    <motion.div
       className="border-4 border-darkBlue shadow-shadowEffect flex min-h-[345px] mb-12"
       role="none presentation"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      layout
     >
       <div className=" relative hidden md:block min-w-[500px] min-h-[345px] object-fill">
         <Image
@@ -71,7 +78,7 @@ const Card = ({
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Card;
