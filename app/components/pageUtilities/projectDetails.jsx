@@ -8,7 +8,7 @@ import Image from "next/image";
 import SectionHeading from "@/app/components/utilities/sectionHeading";
 import { notFound } from "next/navigation";
 import { loadProjectData } from "@/app/utilities/apiUtilities";
-//TODO add loading boundries
+import TagsPage from "./tagsPage";
 const ProjectDetails = async ({ slug }) => {
   const data = await loadProjectData(slug);
   const project = data !== null ? data[0] : null;
@@ -51,9 +51,15 @@ const ProjectDetails = async ({ slug }) => {
         </div>
         <Container>
           <SectionHeading className="mb-9 mt-11">O projekcie</SectionHeading>
-          {/* TODO add technology tags */}
+          <div className="flex gap-3 items-center justify-start">
+            <span className="font-bold p-1 bg-darkBlue text-white">
+              {project.date}
+            </span>
+            <TagsPage tags={project.tags} />
+          </div>
+
           <div
-            className=" text-xl py-9"
+            className=" text-xl py-9 md-file"
             dangerouslySetInnerHTML={{ __html: project.content }}
             role="none presentation"
           ></div>
@@ -64,7 +70,5 @@ const ProjectDetails = async ({ slug }) => {
     return notFound();
   }
 };
-
-// TODO add next not found comopnent
 
 export default ProjectDetails;

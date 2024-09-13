@@ -1,7 +1,8 @@
 ---
-id: 5
-title: test lorem
+id: 6
+title: test2 lorem
 description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dolor hic repellendus fuga aliquam quod excepturi
+date: 2022
 tags:
   - HTML
   - Sass
@@ -14,6 +15,17 @@ githubUrl: https://github.com/dawidwojtaszek/EasybankLandingPage
 # Frontend Mentor - Manage landing page solution
 
 This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
 ## Overview
 
@@ -28,6 +40,15 @@ Users should be able to:
   - The `input` field is empty
   - The email address is not formatted correctly
 
+### Screenshot
+
+![](./screenShot.jpg)
+
+### Links
+
+- Solution URL: [solution URL](https://github.com/dawidwojtaszek/frontendmentor/tree/main/manage-landing-page)
+- Live Site URL: [live site URL](https://manage-landing-page-nine-orpin.vercel.app/)
+
 ## My process
 
 ### Built with
@@ -36,6 +57,8 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [TailwindCSS](https://tailwindcss.com/) - For styles
 - [SwiperJs](https://swiperjs.com/) - For testimonials slider
+
+### What I learned
 
 During the development of this project, I learned how to use the Swiper.js slider.
 
