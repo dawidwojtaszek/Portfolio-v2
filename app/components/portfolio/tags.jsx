@@ -9,8 +9,8 @@ const Tags = ({ tags }) => {
           className={`${
             currentFilters.includes(t)
               ? "border  border-green font-bold text-green "
-              : "bg-green"
-          } py-1 px-2 rounded-md text-white`}
+              : "bg-green text-white"
+          } py-1 px-2 rounded-md `}
           key={index}
         >
           {t}
