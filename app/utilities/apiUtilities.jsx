@@ -27,6 +27,7 @@ export const loadProjectData = async (slug) => {
     const result = await res.json();
 
     if (result.success) {
+      // TODO SROT by ID
       return result.data;
     } else {
       return null;

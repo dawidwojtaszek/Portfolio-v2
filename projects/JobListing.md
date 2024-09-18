@@ -1,12 +1,12 @@
 ---
-id: 4
+id: 3
 title: Job listing app - Frontend Mentor
 description: Rozwiązanie zadania z FrontEndMentor.
 date: 2022
 tags:
   - HTML
   - CSS
-  - Vanilla Javascript
+  - Vanilla js
   - Frontend Mentor
 mainPhotoUrl: /images/jobListing-mockup.jpg
 sesoundaryPhotoUrl: /images/easybankShowcase.jpg
